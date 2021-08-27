@@ -1,0 +1,53 @@
+@import "../connect";
+
+.listMovie {
+  padding: spacing(6) spacing(15);
+  @include responsive_mobile {
+    padding: spacing(13) spacing(0.5);
+    padding-bottom: spacing(1);
+  }
+  @include responsive_tablet {
+    padding: spacing(13) spacing(0.5);
+    width: 100%;
+    padding-bottom: spacing(1);
+  }
+  @include responsive_laptop--mini {
+    padding: spacing(3) spacing(0.5);
+    width: 100%;
+  }
+  @include responsive_laptop--medium {
+    padding: spacing(3) spacing(3);
+    width: 100%;
+  }
+  .container {
+    #listMovieTab {
+      .nav {
+        justify-content: center;
+        .nav-item {
+          transition: all 0.2s;
+          border: none;
+          .nav-link {
+            color: $color-white-0;
+            background: none;
+            @include Text($fs-3, $fw-medium);
+            transition: all 0.1s;
+            border: none;
+            transform: scale(1);
+            &.active {
+              color: $color-blue;
+              @include Text($fs-3, $fw-medium);
+            }
+            &:hover {
+              // @include Text($fs-3, $fw-medium);
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .tab-content {
+        .tab-pane {
+        }
+      }
+    }
+  }
+}
